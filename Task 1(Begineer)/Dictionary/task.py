@@ -4,8 +4,8 @@ friends_tuples = [(name, len(name)) for name in friends]
 for friend in friends_tuples:
     print(friend)
 
-# Part 2: Track and compare trip expenses
-# Your expenses
+# Track and compare trip expenses
+
 your_expenses = {
     "Hotel": 1200,
     "Food": 800,
@@ -14,7 +14,7 @@ your_expenses = {
     "Miscellaneous": 200
 }
 
-# Your partner's expenses
+
 partner_expenses = {
     "Hotel": 1000,
     "Food": 900,
@@ -41,8 +41,7 @@ else:
     print("\nBoth spent the same amount.")
 
 # Find the expense category with the significant difference
-print("\nExpense categories with significant differences:")
 for category in your_expenses:
     difference = abs(your_expenses[category] - partner_expenses[category])
-    if difference > 100:  # Considering a difference > $100 as significant
+    if difference > 100:  
         print(f"Category: {category}, Difference: ${difference}")
